@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+    <string name="button_send">메시지 보내기</string>
+    <string name="edit_message">메시지 수정</string>
+    <string name="textview">TextView</string>
+</resources>
