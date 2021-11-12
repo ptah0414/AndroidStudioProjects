@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ActivityExample</string>
+    <string name="title">이건우</string>
+    <string name="button1">ADD STUDENT</string>
+    <string name="button2">GET STUDENT INFO</string>
+    <string name="editText1">Name</string>
+    <string name="editText2">Student ID</string>
+    <string name="editText3">Phone Number</string>
+</resources>
