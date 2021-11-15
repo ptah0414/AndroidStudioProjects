@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">이건우</string>
+    <string name="logo_explanation">로고</string>
+    <string name="text_explanation">텍스트</string>
+</resources>
