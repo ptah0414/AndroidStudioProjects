@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // dummy 실행하 는 루틴
+    // dummy 실행하는 루틴
     // 시스템에 DummyService.class를 실행하겠다는 것을 intent를 통해 알려줌
     public void startService(View view){
         startService(new Intent(getBaseContext(), DummyService.class));

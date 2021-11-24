@@ -18,8 +18,7 @@ public class DummyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){
-        Toast toast = Toast.makeText(this, "service is started",
-                Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, "service is started", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
         return START_STICKY;
@@ -28,8 +27,7 @@ public class DummyService extends Service {
     @Override
     public void onDestroy(){
         super.onDestroy();
-        Toast toast = Toast.makeText(this, "service is destroyed",
-                Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, "service is destroyed", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
     }
