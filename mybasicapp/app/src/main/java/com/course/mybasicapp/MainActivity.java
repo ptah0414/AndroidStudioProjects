@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         // 아이템들을 목록으로 만들어 준다. 목록은 ArrayList 객체를 사용한다.
         ArrayList<School> schoolsInfo = new ArrayList<>();
-        schoolsInfo.add(new School(R.drawable.dongguk, "동국대학교", "http://www.dongguk.edu/mbs/kr/index.jsp"));
-        schoolsInfo.add(new School(R.drawable.snu, "서울대학교", "http://www.snu.ac.kr/index.html"));
+        schoolsInfo.add(new School(R.drawable.dongguk, "동국대학교", "http://www.dongguk.edu/"));
+        schoolsInfo.add(new School(R.drawable.snu, "서울대학교", "http://www.snu.ac.kr/"));
         schoolsInfo.add(new School(R.drawable.yonsei, "연세대학교", "https://www.yonsei.ac.kr/sc/"));
-        schoolsInfo.add(new School(R.drawable.korea, "고려대학교", "http://ㄹwww.korea.ac.kr/"));
+        schoolsInfo.add(new School(R.drawable.korea, "고려대학교", "http://www.korea.ac.kr/"));
         // 목록을 어댑터에 연결해 준다.
         MyAdapter myAdapter = new MyAdapter(schoolsInfo);
         // 어댑터를 뷰에 연결해 준다.

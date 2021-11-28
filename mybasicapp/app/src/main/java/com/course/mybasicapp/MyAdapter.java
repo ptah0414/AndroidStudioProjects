@@ -1,8 +1,12 @@
 package com.course.mybasicapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,9 +48,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyAdapter.MyViewHolder holder, final int position) {
         MyViewHolder myViewHolder = (MyViewHolder) holder;
-
         myViewHolder.myPicture.setImageResource(mySchoolList.get(position).getImageID());
         myViewHolder.myText.setText(mySchoolList.get(position).getSchoolName());
+        myViewHolder.myPicture.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Context context = v.getContext();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mySchoolList.get(position).getURL()));
+                context.startActivity(intent);
+            }
+        });
+        myViewHolder.myText.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Context context = v.getContext();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mySchoolList.get(position).getURL()));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
