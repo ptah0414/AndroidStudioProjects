@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Recycler View</string>
+    <string name="logo_explanation">logo_explanation</string>
+    <string name="text_explanation">text_explanation</string>
+</resources>
