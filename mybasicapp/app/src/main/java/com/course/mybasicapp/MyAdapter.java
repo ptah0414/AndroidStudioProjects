@@ -1,5 +1,6 @@
 package com.course.mybasicapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -46,7 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     // 리싸이클러에 보여지는 이미지와 문장들을 설정함.
     @Override
-    public void onBindViewHolder(MyAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(MyAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         MyViewHolder myViewHolder = (MyViewHolder) holder;
         myViewHolder.myPicture.setImageResource(mySchoolList.get(position).getImageID());
         myViewHolder.myText.setText(mySchoolList.get(position).getSchoolName());
