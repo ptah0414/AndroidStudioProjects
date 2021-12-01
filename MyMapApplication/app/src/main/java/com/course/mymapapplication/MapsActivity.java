@@ -42,10 +42,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        // 마커를 동국대로 위치시키고 카메라를 이동시킴
+        LatLng dongguk = new LatLng(37.55827, 126.998425);
+        // 마커에 대한 옵션 설정
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(dongguk);
+        markerOptions.title("동국대학교");
+        markerOptions.snippet("지금 있는 곳");
+        mMap.addMarker(markerOptions);
+        // 줌 기능 활성화
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // 현재 위치로 이동
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dongguk));
+
+        // 줌 레벨 설정
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Camera Application 02</string>
+    <string name="app_name">My Internet</string>
     <string name="button_text">이미지 다운로드</string>
     <string name="image_address">https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg</string>
 </resources>
