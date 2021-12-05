@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">My Project</string>
+    <string name="app_name">2017112207 이건우</string>
+    <string name="logo_explanation">logo_explanation</string>
+    <string name="logo_explanation2">logo_explanation</string>
+    <string name="text_explanation">text_explanation</string>
+    <string name='button'>전화</string>
+    <string name='button2'>이메일</string>
+    <string name='button3'>지도</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
