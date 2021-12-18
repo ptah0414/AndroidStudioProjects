@@ -3,6 +3,8 @@ package com.course.final01;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,16 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void addStudent(View view) {
-        ContentValues addValues = new ContentValues();
-        addValues.put(MyContentProvider.NAME,
-                ((EditText) findViewById(R.id.editTextTextPersonName)).getText().toString());
-        addValues.put(MyContentProvider.STUDENT_ID,
-                ((EditText) findViewById(R.id.editTextTextPersonName2)).getText().toString());
-        addValues.put(MyContentProvider.PHONE,
-                ((EditText) findViewById(R.id.editTextTextPersonName3)).getText().toString());
 
-        getContentResolver().insert(MyContentProvider.CONTENT_URI, addValues);
-        Toast.makeText(getBaseContext(),
-                "Record Added", Toast.LENGTH_LONG).show();
+        Context context = view.getContext();
+        Intent intent = new Intent(context, RecyclerView.class);
+        context.startActivity(intent);
+
+//        ContentValues addValues = new ContentValues();
+//        addValues.put(MyContentProvider.NAME,
+//                ((EditText) findViewById(R.id.editTextTextPersonName)).getText().toString());
+//        addValues.put(MyContentProvider.STUDENT_ID,
+//                ((EditText) findViewById(R.id.editTextTextPersonName2)).getText().toString());
+//        addValues.put(MyContentProvider.PHONE,
+//                ((EditText) findViewById(R.id.editTextTextPersonName3)).getText().toString());
+//
+//        getContentResolver().insert(MyContentProvider.CONTENT_URI, addValues);
+//        Toast.makeText(getBaseContext(),
+//                "Record Added", Toast.LENGTH_LONG).show();
     }
 }
